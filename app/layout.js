@@ -8,12 +8,9 @@ const montserrat=Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+
       <head />
-      <body className={`${montserrat.className}`}>
+      <body className={`${montserrat.className} mx-32`}>
         <nav   >
           <ul className='flex gap-6'>
           <h2><a href="/">Logo</a></h2>
