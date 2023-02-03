@@ -1,5 +1,10 @@
 import './globals.css'
-
+import { Montserrat } from '@next/font/google'
+const montserrat=Montserrat({
+  weight:['400','700'],
+  subsets:['latin'],
+  variable:'--font-montserrat'
+})
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -8,7 +13,16 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className={`${montserrat.className}`}>
+        <nav   >
+          <ul className='flex gap-6'>
+          <h2><a href="/">Logo</a></h2>
+            <li><a href="./about">About</a></li>
+            <li><a href="">Sign Up</a></li>
+          </ul>
+        </nav>
+        
+        {children}</body>
     </html>
   )
 }
